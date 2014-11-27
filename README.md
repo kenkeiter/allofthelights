@@ -6,21 +6,22 @@ AllOfTheLights is a quick-and-dirty OS X menubar tool that allows you to simulat
 
 ## Getting Started
 
-Make sure you've got the following libraries installed:
+Getting started with AllOfTheLights is simple. First, clone the directory
+
+	$ git clone https://github.com/kenkeiter/allofthelights.git
+	$ cd allofthelights/
+
+You'll need the following libraries installed:
 
 + `requests`
 + `PyObjC`
 + `py2app`
++ `rumps`
 
-If you've got Python 2.7 installed (most Macs do), you should already have Python, `PyObjC`, and `py2app`. You can install `requests` by running
+If you've got Python 2.7 installed (most Macs do), you should already have Python, `PyObjC`, and `py2app`. You can install everything else by running:
 
-	$ pip install requests
+	$ pip install -r requests.txt
 
-From there, getting started with AllOfTheLights is simple. First, clone the directory
-
-	$ git clone https://github.com/kenkeiter/allofthelights.git
-	$ cd allofthelights/
-		
 Then, build the application bundle using py2app
 
 	$ python setup.py py2app
