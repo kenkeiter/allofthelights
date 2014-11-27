@@ -44,7 +44,7 @@ class AllOfTheLights(rumps.App):
     @rumps.clicked("Edit Config...")
     def edit_config(self, _):
         # use bash to load editor with ~/.allthelights.json
-        os.system("bash -c \"$EDITOR {config_path}\"".format(config_path=self.config_path))
+        os.system("open {config_path}".format(config_path=self.config_path))
 
     def configure(self):
         menus = []
