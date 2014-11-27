@@ -29,7 +29,8 @@ class AllOfTheLights(rumps.App):
         self.base_url = ""
         self.lights = {}
         self.scenes = {}
-        self.config = self.load_config(config_path)
+        self.config_path = self.expand_path(config_path)
+        self.config = self.load_config(self.config_path)
         self.configure()
 
     def activate_scene(self, scene_id):
@@ -39,6 +40,11 @@ class AllOfTheLights(rumps.App):
             if light_name.startswith('__'):
                 continue
             self.lights[light_name].set_level(value)
+
+    @rumps.clicked("Edit Config...")
+    def edit_config(self, _):
+        # use bash to load editor with ~/.allthelights.json
+        os.system("bash -c \"$EDITOR {config_path}\"".format(config_path=self.config_path))
 
     def configure(self):
         menus = []
@@ -88,29 +94,28 @@ class AllOfTheLights(rumps.App):
                     rumps.clicked(scene['__name__'], subscene['__name__'])(scene_activator(self, scene_id))
 
         menus.append(rumps.separator)
-        # print dir(rumps)
-        # return
+        menus.append(rumps.MenuItem("Edit Config...", key='e'))
 
         # activate the app
         super(AllOfTheLights, self).__init__(type(self).__name__, menu=menus, 
             quit_button=rumps.MenuItem('Quit', key='q'))
         self.icon = 'icon.png'
 
-    def load_config(self, basepath):
+    def expand_path(self, basepath):
         basepath = os.path.normpath(basepath)
         basepath = os.path.expanduser(basepath)
         basepath = os.path.expandvars(basepath)
+        return basepath
 
+    def load_config(self, path):
         config = {}
-
         # load the JSON config file
         try:
-            fh = open(basepath, 'r')
+            fh = open(path, 'r')
             json_data = fh.read()
             config = json.loads(json_data)
             fh.close()
         except Exception, e:
-            print "Error loading config: %r" % e
             rumps.alert(title="Config Error", message=str(e), ok="Okie :)", cancel=None)
             os.exit(1)
 
