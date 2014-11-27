@@ -14,24 +14,24 @@ Make sure you've got the following libraries installed:
 
 If you've got Python 2.7 installed (most Macs do), you should already have Python, `PyObjC`, and `py2app`. You can install `requests` by running
 
-		$ pip install requests
+	$ pip install requests
 
 From there, getting started with AllOfTheLights is simple. First, clone the directory
 
-		$ git clone https://github.com/kenkeiter/allofthelights.git
-		$ cd allofthelights/
+	$ git clone https://github.com/kenkeiter/allofthelights.git
+	$ cd allofthelights/
 		
 Then, build the application bundle using py2app
 
-		$ python setup.py py2app
+	$ python setup.py py2app
 
 Copy the resulting application bundle to your _Applications_ directory
 
-		$ cp dist/allofthelights.app /Applications
+	$ cp dist/allofthelights.app /Applications
 
 The application is now installed! When launched, it will look for `.allofthelights.json` in your home directory. Edit `example.json` to point to your RaspberryPi, and copy it there, like so:
 
-		$ cp example.json ~/.allofthelights.json
+	$ cp example.json ~/.allofthelights.json
 
 All set! Launch the application (which should be at `/Applications/allofthelights.app`). You'll get an error if any JSON errors are encountered.
 
