@@ -1,0 +1,177 @@
+{
+	"base_url": "http://192.168.1.6:8083/ZWaveAPI/Run",
+	"lights": {
+		"Under Counter (Kitchen)": 3,
+		"Wall (Living Room)": 4,
+		"Seating (Living Room)": 5,
+		"Reading Nook": 6,
+		"Table (Kitchen)": 7,
+		"Walk Light (Entrance)": 8,
+		"Wall (Bedroom)": 9,
+		"Entrance": 10,
+		"Back Wall (Kitchen)": 11,
+		"Back Wall (Bedroom)": 12,
+		"Bathroom Light": 13,
+		"Bathroom Fan": 14
+	},
+	"scenes": [
+		{
+			"__name__": "Bed Time",
+			"Under Counter (Kitchen)": 20,
+			"Wall (Living Room)": 0,
+			"Seating (Living Room)": 0,
+			"Reading Nook": 0,
+			"Table (Kitchen)": 20,
+			"Walk Light (Entrance)": 99,
+			"Wall (Bedroom)": 20,
+			"Entrance": 20,
+			"Back Wall (Kitchen)": 20,
+			"Back Wall (Bedroom)": 0,
+		},
+		{
+			"__name__": "Bedroom",
+			"__scenes__": [
+				{
+					"__name__": "Off",
+					"Wall (Bedroom)": 0,
+					"Back Wall (Bedroom)": 0
+				},
+				{
+					"__name__": "Evening",
+					"Wall (Bedroom)": 20,
+					"Back Wall (Bedroom)": 15
+				},
+				{
+					"__name__": "Dressing",
+					"Wall (Bedroom)": 10,
+					"Back Wall (Bedroom)": 40
+				},
+				{
+					"__name__": "Full",
+					"Wall (Bedroom)": 99,
+					"Back Wall (Bedroom)": 99
+				}
+			]
+		},
+		{
+			"__name__": "Living Room",
+			"__scenes__": [
+				{
+					"__name__": "Off",
+					"Wall (Living Room)": 0,
+					"Seating (Living Room)": 0,
+					"Reading Nook": 0
+				},
+				{
+					"__name__": "Evening",
+					"Wall (Living Room)": 30,
+					"Seating (Living Room)": 30,
+					"Reading Nook": 40
+				},
+				{
+					"__name__": "Entertaining",
+					"Wall (Living Room)": 30,
+					"Seating (Living Room)": 40,
+					"Reading Nook": 30
+				},
+				{
+					"__name__": "Evening",
+					"Wall (Living Room)": 30,
+					"Seating (Living Room)": 30,
+					"Reading Nook": 20
+				},
+				{
+					"__name__": "Evening",
+					"Wall (Living Room)": 99,
+					"Seating (Living Room)": 99,
+					"Reading Nook": 99
+				}
+			]
+		},
+		{
+			"__name__": "Kitchen",
+			"__scenes__": [
+				{
+					"__name__": "Off",
+					"Under Counter (Kitchen)": 0,
+					"Table (Kitchen)": 0,
+					"Back Wall (Kitchen)": 0
+				},
+				{
+					"__name__": "Evening",
+					"Under Counter (Kitchen)": 20,
+					"Table (Kitchen)": 20,
+					"Back Wall (Kitchen)": 20
+				},
+				{
+					"__name__": "Cooking",
+					"Under Counter (Kitchen)": 80,
+					"Table (Kitchen)": 70,
+					"Back Wall (Kitchen)": 60
+				},
+				{
+					"__name__": "Entertaining",
+					"Under Counter (Kitchen)": 40,
+					"Table (Kitchen)": 40,
+					"Back Wall (Kitchen)": 30
+				},
+				{
+					"__name__": "Full",
+					"Under Counter (Kitchen)": 99,
+					"Table (Kitchen)": 99,
+					"Back Wall (Kitchen)": 99
+				}
+			]
+		},
+		{
+			"__name__": "All",
+			"__scenes__": [
+				{
+					"__name__": "Off",
+					"Under Counter (Kitchen)": 0,
+					"Wall (Living Room)": 0,
+					"Seating (Living Room)": 0,
+					"Reading Nook": 0,
+					"Table (Kitchen)": 0,
+					"Walk Light (Entrance)": 0,
+					"Wall (Bedroom)": 0,
+					"Entrance": 0,
+					"Back Wall (Kitchen)": 0,
+					"Back Wall (Bedroom)": 0,
+					"Bathroom Light": 0,
+					"Bathroom Fan": 0
+				},
+				{
+					"__name__": "On",
+					"Under Counter (Kitchen)": 255,
+					"Wall (Living Room)": 255,
+					"Seating (Living Room)": 255,
+					"Reading Nook": 255,
+					"Table (Kitchen)": 255,
+					"Walk Light (Entrance)": 255,
+					"Wall (Bedroom)": 255,
+					"Entrance": 255,
+					"Back Wall (Kitchen)": 255,
+					"Back Wall (Bedroom)": 255,
+					"Bathroom Light": 255,
+					"Bathroom Fan": 255
+				},
+				{
+					"__name__": "Full",
+					"Under Counter (Kitchen)": 99,
+					"Wall (Living Room)": 99,
+					"Seating (Living Room)": 99,
+					"Reading Nook": 99,
+					"Table (Kitchen)": 99,
+					"Walk Light (Entrance)": 99,
+					"Wall (Bedroom)": 99,
+					"Entrance": 99,
+					"Back Wall (Kitchen)": 99,
+					"Back Wall (Bedroom)": 99,
+					"Bathroom Light": 99,
+					"Bathroom Fan": 99
+				},
+			]
+		}
+	]
+}
