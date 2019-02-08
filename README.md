@@ -20,7 +20,7 @@ You'll need the following libraries installed:
 
 If you've got Python 2.7 installed (most Macs do), you should already have Python, `PyObjC`, and `py2app`. You can install everything else by running:
 
-	$ pip install -r requests.txt
+	$ pip install -r requirements.txt
 
 Then, build the application bundle using py2app
 
